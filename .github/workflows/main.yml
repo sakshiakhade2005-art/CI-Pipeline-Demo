@@ -1,1 +1,20 @@
-.github/workflows
+name: CI Pipeline 
+On: 
+Push: 
+branches:
+- main 
+Jobs: 
+Build: 
+runs-on: ubuntu-latest 
+
+Steps: 
+- name: Checkout Repository
+uses: actions/checkout@v4 
+- name: Display Welcome Message
+run: echo "Continuous Integration Started" 
+- name: Display Current Directory
+run: pwd 
+- name: List Repository Files
+run: ls 
+- name: Display Completion Message
+run: echo "Pipeline Executed Successfully" 
